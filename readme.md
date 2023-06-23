@@ -125,6 +125,15 @@ linters-settings:
         json: camel
         yaml: camel
         xml: camel
+    overrides:
+      - pkg: foo/foo
+        use-field-name: true
+        rules:
+          json: snake
+          xml: pascal
+        ignored-fields:
+          - Bar
+          - Foo
 ```
 
 More information here https://golangci-lint.run/usage/linters/#tagliatelle
