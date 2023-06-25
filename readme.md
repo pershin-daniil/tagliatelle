@@ -147,8 +147,7 @@ linters-settings:
       # Overrides the default/root configuration.
       # Default: []
       overrides:
-          # The fully qualified package name. (uses `/` only)
-          # <module_name>/<package_name>
+          # The package name. (uses `/` only)
           # Require
         - pkg: example.com/foo/bar
           # Default: false or the same as the default/root configuration.
@@ -169,7 +168,7 @@ linters-settings:
 
 #### Examples
 
-Overrides case rules for the package `example.com/foo/bar`:
+Overrides case rules for the package `foo/bar`:
 
 ```yaml
 linters-settings:
@@ -186,7 +185,7 @@ linters-settings:
             xml: pascal
 ```
 
-Ignore fields inside the package `example.com/foo/bar`:
+Ignore fields inside the package `foo/bar`:
 
 ```yaml
 linters-settings:
@@ -197,13 +196,13 @@ linters-settings:
         yaml: camel
         xml: camel
       overrides:
-        - pkg: example.com/foo/bar
+        - pkg: foo/bar
           ignored-fields:
             - Bar
             - Foo
 ```
 
-Ignore the package `example.com/foo/bar`:
+Ignore the package `foo/bar`:
 
 ```yaml
 linters-settings:
@@ -214,7 +213,7 @@ linters-settings:
         yaml: camel
         xml: camel
       overrides:
-        - pkg: example.com/foo/bar
+        - pkg: foo/bar
           ignore: true
 ```
 
